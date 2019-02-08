@@ -89,7 +89,7 @@ bool fRecordLogOpcodes = false;
 bool fIsVMlogFile = false;
 bool fGettingValuesDGP = false;
 
-std::string SCVersion ("/Seedcore:5.2.5/");
+std::string SCVersion ("/Seedcore:1.0.0/");
 
 
 /** The maximum allowed size for a serialized block, in bytes (only for buffer size limits) */
