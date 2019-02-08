@@ -80,12 +80,12 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
         boost::assign::map_list_of
-                ( 0,   uint256("0x00000904b79711c00b59596223bfd34462bb21ff6a972544ba925618989f6334") )
+                ( 0,   uint256("0x00000ebbb1d8f3334578cf3c4e404d5c3a65ca0c9afb9100f43e8d5a37404253") )
 ;
 
 static const Checkpoints::CCheckpointData data = {
         &mapCheckpoints,
-        1549594708, // * UNIX timestamp of last checkpoint block
+        1549622318, // * UNIX timestamp of last checkpoint block
         0,     // * total number of transactions between genesis and last checkpoint
         //               (the tx=... number in UpdateTip debug.log lines)
         1000 // * estimated number of transactions per day after checkpoint
@@ -178,7 +178,7 @@ public:
         const char* pszTimestamp = "Seed - Implemented New Cryptocurrency Seed - ThankYou - DevStar"; // Input Activation code to activate blockchain
         CMutableTransaction txNew;
         txNew.nVersion = 1;
-        txNew.nTime = 1549594708;
+        txNew.nTime = 1549622318;
         txNew.nLockTime = 0;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -189,9 +189,9 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = BlockMerkleRoot(genesis);
         genesis.nVersion = 1;
-        genesis.nTime = 1549594708; //10/10/2017
+        genesis.nTime = 1549622318; //10/10/2017
         genesis.nBits = 0x1e0fffff;
-        genesis.nNonce = 148797;
+        genesis.nNonce = 285854;
         genesis.hashStateRoot = uint256(h256Touint(dev::h256("e965ffd002cd6ad0e2dc402b8044de833e06b23127ea8c3d80aec91410771495"))); // seed
         genesis.hashUTXORoot = uint256(h256Touint(dev::sha3(dev::rlp("")))); // seed
 
@@ -205,8 +205,8 @@ public:
         // std::cout << genesis.GetHash().GetHex() << std::endl;
         // std::cout << genesis.hashMerkleRoot.GetHex() << std::endl;
 
-        assert(consensus.hashGenesisBlock == uint256("0x00000904b79711c00b59596223bfd34462bb21ff6a972544ba925618989f6334"));
-        assert(genesis.hashMerkleRoot == uint256("0x862a35cc0c2748f361bf982b8538ad22134cd6d07cfccaf8204f6b796ced4d07"));
+        assert(consensus.hashGenesisBlock == uint256("0x00000ebbb1d8f3334578cf3c4e404d5c3a65ca0c9afb9100f43e8d5a37404253"));
+        assert(genesis.hashMerkleRoot == uint256("0x06069a17b97eb13fadfec04b6de86e9d30c7a4c00601ad9ee5edcf76360a18cf"));
 
         ////////////////////////////////////////////////////////////////////////////////////////////////
         vSeeds.push_back(CDNSSeedData("188.166.93.135", "188.166.93.135"));
@@ -240,7 +240,7 @@ public:
         strSporkKey = "04a983220ea7a38a7106385003fef77896538a382a0dcc389cc45f3c98751d9af423a097789757556259351198a8aaa628a1fd644c3232678c5845384c744ff8d7";
 
         strDarksendPoolDummyAddress = "LgcjpYxWa5EB9KCYaRtpPgG8kgiWRvJY38";
-        nStartMasternodePayments = 1549594708; // 10/10/2017
+        nStartMasternodePayments = 1549622318; // 10/10/2017
 
         nStakingRoundPeriod = 120; // 2 minutes a round
         nStakingInterval = 22;
